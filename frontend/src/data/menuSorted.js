@@ -276,3 +276,188 @@ export const Beilagen = [
   { name: "Butterreis", description: "", price: "€3,30" },
   { name: "Röstzwiebeln", description: "", price: "€2,80" },
 ];
+
+export const Eis = [
+  { name: "Eisschokolade", description: "", price: "€5,50" },
+  { name: "Eiskaffee", description: "", price: "€5,50" },
+  { name: "Vanilleeis mit heißen Himbeeren", description: "", price: "€6,00" },
+  { name: "Vanilleeis mit heißen Kirschen", description: "", price: "€6,00" },
+  {
+    name: "Gemischtes Eis",
+    description: "Vanille-, Schokoladen- und Erdbeereis mit Sahne",
+    price: "€4,50",
+  },
+  {
+    name: "Kinder Eis 2 Kugeln Eis mit Sahne",
+    description: "",
+    price: "€3,50",
+  },
+  {
+    name: "Heißer Pfirsich",
+    description: "Vanilleeis mit Pfirsichen und Schokoladensoße",
+    price: "€5,50",
+  },
+];
+
+export const AlkoholfreieGetraenke = [
+  { name: "Coca Cola", description: "", price: "€2,50" },
+  { name: "Cola Zero", description: "", price: "€2,50" },
+  { name: "Fanta", description: "", price: "€2,50" },
+  { name: "Sprite", description: "", price: "€2,50" },
+  { name: "Spezi", description: "", price: "€2,50" },
+  { name: "Apfelschorle", description: "", price: "€2,50" },
+  { name: "Vio Johannisbeersaftschorle 0,3l", description: "", price: "€2,80" },
+  { name: "Vio Rhababerschorle 0,3l", description: "", price: "€2,80" },
+  {
+    name: "Wasser Gerolstein 0,25l / 0,75l",
+    description: "",
+    price: "€1,90 / €4,30",
+  },
+  { name: "Wasser Gerolstein still 0,25l", description: "", price: "€1,90" },
+  { name: "Bitter Lemon 0,2l", description: "", price: "€2,10" },
+  { name: "Orangensaft 0,2l", description: "", price: "€2,10" },
+  { name: "Kirschsaft 0,2l", description: "", price: "€2,40" },
+  { name: "Bananensaft 0,2l", description: "", price: "€2,40" },
+];
+
+export const HeisseGetraenke = [
+  { name: "Tasse Kaffee", description: "", price: "€1,90" },
+  { name: "Kännchen Kaffee", description: "", price: "€3,30" },
+  { name: "Cappuccino", description: "", price: "€2,50" },
+  { name: "Latte Macchiato", description: "", price: "€3,30" },
+  { name: "Espresso", description: "", price: "€1,90" },
+  { name: "Doppelter Espresso", description: "", price: "€2,80" },
+  { name: "Tee", description: "", price: "€1,80" },
+];
+
+export const Biere = [
+  {
+    name: "Gaffel Kölsch 0,2l / 0,3l",
+    description: "",
+    price: "€1,80 / €2,50",
+    subcategory: "Vom Faß",
+  },
+  {
+    name: "Krombacher 0,2l / 0,3l",
+    description: "",
+    price: "€1,80 / €2,50",
+    subcategory: "Vom Faß",
+  },
+  {
+    name: "Paulaner Weizen naturtrüb 0,3l / 0,5l",
+    description: "",
+    price: "€2,50 / €3,80",
+    subcategory: "Vom Faß",
+  },
+  {
+    name: "Bergisches Landbier 0,3l",
+    description: "",
+    price: "€2,50",
+    subcategory: "Vom Faß",
+  },
+  {
+    name: "Paulaner alkoholfrei",
+    description: "",
+    price: "€3,80",
+    subcategory: "Aus der Flasche",
+  },
+  {
+    name: "Krombacher alkoholfrei 0,33l",
+    description: "",
+    price: "€2,50",
+    subcategory: "Aus der Flasche",
+  },
+  {
+    name: "Fassbrause 0,33l",
+    description: "",
+    price: "€2,50",
+    subcategory: "Aus der Flasche",
+  },
+  {
+    name: "Vitamalz 0,33l",
+    description: "",
+    price: "€2,50",
+    subcategory: "Aus der Flasche",
+  },
+];
+
+export const Spirituosen = [
+  { name: "Bayle's 2cl", description: "", price: "€1,80" },
+  { name: "Dirty Harry 2cl", description: "", price: "€1,80" },
+  { name: "Fernet Branca 2cl", description: "", price: "€1,80" },
+  { name: "Genever 2cl", description: "", price: "€1,80" },
+  { name: "Grappa 2cl", description: "", price: "€1,80" },
+  { name: "Jägermeister 2cl", description: "", price: "€1,80" },
+  { name: "Kabänes 2cl", description: "", price: "€1,80" },
+  { name: "Korn 2cl", description: "", price: "€1,80" },
+  { name: "Malteser 2cl", description: "", price: "€1,80" },
+  { name: "Ossenkämper 2cl", description: "", price: "€1,80" },
+  { name: "Ramazzoti 2cl", description: "", price: "€1,80" },
+  { name: "Jack Daniels Cola", description: "", price: "€3,80" },
+  { name: "Sambuca 2cl", description: "", price: "€1,80" },
+  { name: "Tequila weiß 2cl", description: "", price: "€1,80" },
+  { name: "Tunel 2cl", description: "", price: "€1,80" },
+  { name: "Wodka 2cl", description: "", price: "€1,80" },
+  { name: "Wacholder 2cl", description: "", price: "€1,80" },
+  { name: "Williamsbirne 2cl", description: "", price: "€1,80" },
+  { name: "Wermeu Krugmann 2cl", description: "", price: "€1,80" },
+  { name: "Linie Aquavit 2cl", description: "", price: "€1,80" },
+  { name: "Obstler 2cl", description: "", price: "€1,80" },
+];
+
+export const KroatischeSpirituosenspezialitaet = [
+  { name: "Slivovic 2cl", description: "", price: "€1,80" },
+  { name: "Pelinkovac 2cl", description: "", price: "€1,80" },
+  { name: "Kruškovac 2cl", description: "", price: "€1,80" },
+  { name: "Orahovac 2cl", description: "", price: "€1,80" },
+  { name: "Julischka 2cl", description: "", price: "€1,80" },
+];
+
+export const Wein = [
+  {
+    name: "Laški Rizling 0,25l",
+    description: "Riesling, lieblich, spritzig und frisch",
+    price: "€4,70",
+    subcategory: "Weißwein",
+  },
+  {
+    name: "Graševina trocken 0,25l",
+    description:
+      "trocken, diskret fruchtig und blumig, süffig mit milder Säure",
+    price: "€4,70",
+    subcategory: "Weißwein",
+  },
+  {
+    name: "Graševina halbtrocken 0,25l",
+    description: "halbtrocken, sehr aromatisch",
+    price: "€4,70",
+    subcategory: "Weißwein",
+  },
+  {
+    name: "Plavac 0,25l",
+    description:
+      "trocken, jung und fruchtig, vollmundig, weich und mild im Geschmack",
+    price: "€4,20",
+    subcategory: "Rotwein",
+  },
+  {
+    name: "Pelješac 0,25l",
+    description:
+      "halbtrocken, auf der Halbinsel Pelješac entstehen die berühmtesten kroatischen Rotweine.",
+    price: "€4,20",
+    subcategory: "Rotwein",
+  },
+  {
+    name: "Dalmatiner 0,25l",
+    description:
+      "lieblich, weicher Geschmack, harmonisch und ausgewogen, dominiert von einer angenehmen Süße",
+    price: "€4,20",
+    subcategory: "Rotwein",
+  },
+  {
+    name: "Rose Adria 0,25l",
+    description: "halbtrocken, frisch und fruchtig",
+    price: "€4,70",
+  },
+  { name: "Sekt Hausmarke 0,75l", description: "", price: "€16,00" },
+];

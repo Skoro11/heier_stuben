@@ -9,7 +9,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <Link to="/">
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
             <img
               src="/hs-logo.png"
               alt="Heier Stuben Logo"
@@ -21,24 +26,43 @@ export default function Navbar() {
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-8 text-gray-800 font-medium">
           <li>
-            <Link to="/" className="hover:text-gray-600 transition">
+            <Link
+              to="/"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="hover:text-gray-600 transition"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link to="/menu" className="hover:text-gray-600 transition">
+            <Link
+              to="/menu"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="hover:text-gray-600 transition"
+            >
               Menu
             </Link>
           </li>
           <li>
-            <Link to="/" className="hover:text-gray-600 transition">
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className=" bg-linear-to-r from-blue-500 to-blue-600
+             text-white font-semibold
+              py-2 px-5
+               rounded-full
+               shadow-lg
+              hover:from-blue-600 hover:to-blue-700
+              hover:shadow-xl
+              transition-all duration-300
+              focus:outline-none focus:ring-2 focus:ring-blue-400"
+            >
               Reserve a Table
             </Link>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-gray-600 transition">
-              Contact
-            </a>
           </li>
         </ul>
 
@@ -65,7 +89,10 @@ export default function Navbar() {
               <Link
                 to="/"
                 className="hover:text-gray-600 transition"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 Home
               </Link>
@@ -74,28 +101,25 @@ export default function Navbar() {
               <Link
                 to="menu"
                 className="hover:text-gray-600 transition"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 Menu
               </Link>
             </li>
             <li>
-              <a
-                href="#reserve"
-                className="hover:text-gray-600 transition"
-                onClick={() => setIsOpen(false)}
+              <Link
+                to="/"
+                className="hover:text-gray-600 transition bg-red-0"
+                onClick={() => {
+                  setIsOpen(false);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 Reserve a Table
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="hover:text-gray-600 transition"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

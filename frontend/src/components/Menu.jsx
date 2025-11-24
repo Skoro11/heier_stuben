@@ -4,10 +4,7 @@ export function Menu({ category, categoryItems, isTrue }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main
-      id={category}
-      className="bg-white py-4 scroll-mt-130 md:scroll-mt-170"
-    >
+    <main id={category} className="bg-white py-4 scroll-mt-40 md:scroll-mt-40">
       <h2 className="text-3xl font-bold mb-4">{category}</h2>
 
       {categoryItems.map((item, index) => (

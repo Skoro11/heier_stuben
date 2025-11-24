@@ -1,13 +1,17 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import menuItems from "../data/menu.json";
+import { menuItems } from "../data/menu.js";
 import { NotebookText } from "lucide-react";
 import { useState } from "react";
 import { Search } from "lucide-react";
+import { useMenu } from "../hooks/MenuState.jsx";
+import { useEffect } from "react";
 export function CategorySlider() {
   const sets = [];
+  const { menuState, setMenuState, searchResults, setSearchResults } =
+    useMenu();
+
+  const [searchQuery, setSearchQuery] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollTo, setScrollTo] = useState(null);
   menuItems.forEach((item) => {
     if (!sets.includes(item.category)) {
       sets.push(item.category);
@@ -16,53 +20,34 @@ export function CategorySlider() {
     }
   });
 
-  const settings = {
-    infinite: false,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    swipeToSlide: true,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1280, // screens <= 1280px
-        settings: {
-          slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 1024, // screens <= 1024px
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 768, // screens <= 768px
-        settings: {
-          arrows: false,
-          slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 400, // very small screens
-        settings: {
-          slidesToShow: 3,
-          arrows: false,
-        },
-      },
-    ],
-  };
+  useEffect(() => {
+    if (scrollTo) {
+      const element = document.getElementById(scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        const timer = setTimeout(() => {
+          setScrollTo(null); // reset after scrolling
+        }, 0);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [scrollTo, menuState]);
 
-  function scrollToCategory(categoryName) {
-    const category = document.getElementById(categoryName);
-    if (category) {
-      category.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+  function handleSearch(query) {
+    if (!query.length == 0) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      const filtered = menuItems.filter(
+        (item) =>
+          item.name.toLowerCase().includes(query.toLowerCase()) ||
+          item.category.toLowerCase().includes(query.toLowerCase())
+      );
+      setSearchResults(filtered);
+      setMenuState("search");
+    } else {
+      setMenuState("main");
     }
   }
-
-  function scrollToCategoryMobile(categoryName) {
+  function scrollToCategory(categoryName) {
     const category = document.getElementById(categoryName);
     if (category) {
       category.scrollIntoView({
@@ -82,11 +67,15 @@ export function CategorySlider() {
             <input
               type="text"
               placeholder="Search..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm"
             />
-            <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer" />
+            <Search
+              onClick={() => handleSearch(searchQuery)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
+            />
           </div>
-
           <button
             onClick={() => ShowCategories()}
             className="p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl shadow-md flex items-center justify-center"
@@ -94,6 +83,7 @@ export function CategorySlider() {
             <NotebookText />
           </button>
         </div>
+
         {isMenuOpen ? (
           <div className="w-full  mx-auto mt-4">
             <div className="font-semibold text-lg mb-2 text-gray-700">
@@ -104,7 +94,9 @@ export function CategorySlider() {
                 <li key={index}>
                   <button
                     onClick={() => {
-                      scrollToCategoryMobile(category);
+                      setMenuState("main");
+                      setSearchResults([]);
+                      setScrollTo(category);
                       ShowCategories();
                     }}
                     className="w-full text-left px-4 py-3 hover:bg-blue-50 focus:outline-none focus:bg-blue-50 transition-colors"
