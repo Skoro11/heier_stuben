@@ -1,17 +1,21 @@
-import { Banner } from "../components/Banner";
-import { ReserveTable } from "../components/ReserveTable";
+import { HeroSection } from "../sections/Banner";
+import { ReserveTable } from "../sections/ReserveTable";
 import { About } from "../sections/About";
+import { MenuSwiper } from "../sections/MenuSwiper";
 export function LandingPage() {
   return (
     <>
-      <Banner />
+      <HeroSection />
       <ReserveTable />
+      <MenuSwiper />
       <About />
 
       <section className="max-w-7xl mx-auto px-6 md:pb-16 md:space-y-20 mt-8 md:mt-0">
-        <div className="text-center text-3xl font-bold">Where to find us</div>
+        <div className="hidden md:block text-center text-3xl font-bold">
+          Where to find us
+        </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-8 mt-8 md:mt-0">
+        <div className="flex flex-col md:flex-row items-center gap-8 mt-18  md:mt-0">
           {/* Left side: text */}
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-4">

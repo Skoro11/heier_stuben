@@ -1,13 +1,11 @@
 import "./index.css";
-import Navbar from "./components/Navbar";
-import { Banner } from "./components/Banner";
-import { Menu } from "./components/Menu";
+import Navbar from "./sections/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ReserveTable } from "./components/ReserveTable";
-import { CategorySlider } from "./components/CategorySlider";
-import { About } from "./sections/About";
+
 import { LandingPage } from "./pages/LandingPage";
 import { MenuPage } from "./pages/MenuPage";
+import { Footer } from "./sections/Footer";
+import LegalPage from "./pages/LegalPage";
 
 function App() {
   return (
@@ -19,8 +17,10 @@ function App() {
         <Routes>
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/" element={<LandingPage />} />
+          <Route path="/legal" element={<LegalPage />} />
         </Routes>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

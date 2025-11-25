@@ -1,0 +1,94 @@
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules"; // correct import
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+export function MenuSwiper() {
+  const [open, setOpen] = useState(false);
+  const menuItems = [
+    "first_page.jpg",
+    "./alkoholfrei.jpg",
+    "./spirituosen.jpg",
+    "./weine.jpg",
+    "./suppen.jpg",
+    "./kleine.jpg",
+    "./pute.jpg",
+    "./grill.jpg",
+    "./spezielles.jpg",
+    "./rumpsteak.jpg",
+  ];
+
+  return (
+    <main className="mb-8 mt-8">
+      {/* Thumbnail */}
+      <h2 className="pl-4 text-center  text-3xl font-bold md:mb-8 my-8 md:mt-0 md:text-center">
+        Swipe through our menu
+      </h2>
+      <div className="flex justify-center gap-4 mx-auto w-full lg:w-1/2  p-4">
+        <img
+          src="./first_page.jpg"
+          alt="Menu Preview"
+          className="w-auto rounded-xl md:max-h-70 shadow cursor-pointer hover:opacity-80 transition"
+          onClick={() => setOpen(true)}
+        />
+        <img
+          src="./alkoholfrei.jpg"
+          alt="Menu Preview"
+          className="hidden md:block w-auto rounded-xl md:max-h-70 rounded-xl shadow cursor-pointer hover:opacity-80 transition"
+          onClick={() => setOpen(true)}
+        />
+        <img
+          src="./spirituosen.jpg"
+          alt="Menu Preview"
+          className="w-auto hidden md:block rounded-xl md:max-h-70 rounded-xl shadow cursor-pointer hover:opacity-80 transition"
+          onClick={() => setOpen(true)}
+        />
+      </div>
+      {/* Modal */}
+      {open && (
+        <>
+          <div
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+            onClick={() => setOpen(false)}
+          >
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute text-5xl top-0 right-0 z-50 text-white  rounded-full px-3 py-1 font-bold"
+            >
+              ×
+            </button>
+            <div
+              className="relative max-w-3xl w-full p-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close button */}
+
+              {/* Swiper */}
+              <Swiper
+                modules={[Navigation, Pagination]}
+                navigation
+                pagination={{ clickable: true }}
+                spaceBetween={20}
+                slidesPerView={1}
+              >
+                {menuItems.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="flex justify-center items-center my-10 h-[calc(100vh-80px)]">
+                      <img
+                        src={item}
+                        alt={item}
+                        className="h-full object-contain rounded-lg"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+        </>
+      )}
+    </main>
+  );
+}
