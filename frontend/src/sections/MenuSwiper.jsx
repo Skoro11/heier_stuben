@@ -8,16 +8,16 @@ import "swiper/css/pagination";
 export function MenuSwiper() {
   const [open, setOpen] = useState(false);
   const menuItems = [
-    "first_page.jpg",
-    "./alkoholfrei.jpg",
-    "./spirituosen.jpg",
-    "./weine.jpg",
-    "./suppen.jpg",
-    "./kleine.jpg",
-    "./pute.jpg",
-    "./grill.jpg",
-    "./spezielles.jpg",
-    "./rumpsteak.jpg",
+    "first_page.webp",
+    "./alkoholfreiweb.webp",
+    "./spirituosenweb.webp",
+    "./weineweb.webp",
+    "./suppenweb.webp",
+    "./kleineweb.webp",
+    "./puteweb.webp",
+    "./grillweb.webp",
+    "./speziellesweb.webp",
+    "./rumpsteakweb.webp",
   ];
 
   return (
@@ -28,19 +28,19 @@ export function MenuSwiper() {
       </h2>
       <div className="flex justify-center gap-4 mx-auto w-full lg:w-1/2  p-4">
         <img
-          src="./first_page.jpg"
+          src="./first_page.webp"
           alt="Menu Preview"
           className="w-auto rounded-xl md:max-h-70 shadow cursor-pointer hover:opacity-80 transition"
           onClick={() => setOpen(true)}
         />
         <img
-          src="./alkoholfrei.jpg"
+          src="./alkoholfreiweb.webp"
           alt="Menu Preview"
           className="hidden md:block w-auto rounded-xl md:max-h-70 rounded-xl shadow cursor-pointer hover:opacity-80 transition"
           onClick={() => setOpen(true)}
         />
         <img
-          src="./spirituosen.jpg"
+          src="./spirituosenweb.webp"
           alt="Menu Preview"
           className="w-auto hidden md:block rounded-xl md:max-h-70 rounded-xl shadow cursor-pointer hover:opacity-80 transition"
           onClick={() => setOpen(true)}
