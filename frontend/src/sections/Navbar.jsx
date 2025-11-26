@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed z-10 w-full bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto  px-4 xl:px-0 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
           <Link
@@ -16,7 +16,7 @@ export default function Navbar() {
             }}
           >
             <img
-              src="/hs-logo.png"
+              src="/modern.jpg"
               alt="Heier Stuben Logo"
               className="h-10 w-auto"
             />
@@ -38,28 +38,54 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              to="/menu"
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              to="/#menu"
               className="hover:text-gray-600 transition"
+              onClick={(e) => {
+                e.preventDefault(); // prevent default jump
+                const el = document.getElementById("menu");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+                setIsOpen(false); // if mobile
+              }}
             >
               Menu
             </Link>
           </li>
           <li>
             <Link
-              to="/"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className=" bg-linear-to-r from-blue-500 to-blue-600
-             text-white font-semibold
-              py-2 px-5
-               rounded-full
-               shadow-lg
-              hover:from-blue-600 hover:to-blue-700
-              hover:shadow-xl
-              transition-all duration-300
-              focus:outline-none focus:ring-2 focus:ring-blue-400"
+              to="/#location"
+              className="hover:text-gray-600 transition"
+              onClick={(e) => {
+                e.preventDefault(); // prevent default jump
+                const el = document.getElementById("location");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+                setIsOpen(false); // if mobile
+              }}
+            >
+              Location
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/#reserve"
+              onClick={(e) => {
+                e.preventDefault(); // prevent default jump
+                const el = document.getElementById("reserve");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+                setIsOpen(false); // if mobile
+              }}
+              className="bg-[var(--beige-color)] 
+              text-[var(--brown-color)] 
+              font-semibold 
+              py-3 px-6 
+  rounded-full 
+  shadow-md 
+  hover:shadow-lg 
+  transition-all 
+  duration-300 
+  focus:outline-none 
+  focus:ring-2 
+  focus:ring-[var(--brown-color)]
+  inline-block"
             >
               Reserve a Table
             </Link>
@@ -88,7 +114,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/"
-                className="hover:text-gray-600 transition"
+                className="hover:text-gray-600 transition w-full block "
                 onClick={() => {
                   setIsOpen(false);
                   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -99,20 +125,46 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                to="menu"
-                className="hover:text-gray-600 transition"
-                onClick={() => {
-                  setIsOpen(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                to="/#menu"
+                className="hover:text-gray-600 transition w-full block"
+                onClick={(e) => {
+                  e.preventDefault(); // prevent default jump
+                  const el = document.getElementById("menu");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                  setIsOpen(false); // if mobile
                 }}
               >
                 Menu
               </Link>
             </li>
+            <Link
+              to="/#location"
+              className="hover:text-gray-600 transition w-full block"
+              onClick={(e) => {
+                e.preventDefault(); // prevent default jump
+                const el = document.getElementById("location");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+                setIsOpen(false); // if mobile
+              }}
+            >
+              Location
+            </Link>
+            <Link
+              to="/#footer"
+              className="hover:text-gray-600 transition w-full block"
+              onClick={(e) => {
+                e.preventDefault(); // prevent default jump
+                const el = document.getElementById("footer");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+                setIsOpen(false); // if mobile
+              }}
+            >
+              Working Hours
+            </Link>
             <li>
               <Link
                 to="/"
-                className="hover:text-gray-600 transition bg-red-0"
+                className="hover:text-gray-600 transition bg-red-0 w-full block"
                 onClick={() => {
                   setIsOpen(false);
                   window.scrollTo({ top: 0, behavior: "smooth" });

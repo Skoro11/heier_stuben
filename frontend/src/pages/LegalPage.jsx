@@ -1,6 +1,6 @@
 export default function LegalPage() {
   return (
-    <div className="max-w-6xl   py-10 space-y-10">
+    <div className="max-w-7xl mx-auto  py-10 px-4 lg:px-0 space-y-10">
       {/* Impressum */}
       <section>
         <h1 className="text-3xl font-bold mb-4">Impressum</h1>

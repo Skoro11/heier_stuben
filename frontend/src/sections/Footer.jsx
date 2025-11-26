@@ -12,8 +12,8 @@ const hours = {
 
 export function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-10">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-black text-white py-10" id="footer">
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Opening hours */}
         <div>
           <h3 className="text-lg font-semibold mb-2">Öffnungszeiten</h3>

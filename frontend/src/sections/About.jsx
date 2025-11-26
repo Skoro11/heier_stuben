@@ -1,62 +1,117 @@
 export function About() {
   return (
-    <section className="max-w-7xl mx-auto px-6 md:pb-16 md:space-y-20">
-      <div className="text-center text-3xl font-bold ">About us</div>
-      {/* Row 1: Birthdays, Burials, etc. */}
-      <div className="flex flex-col md:flex-row items-center gap-8 mt-8 md:mt-0">
-        <div className="md:w-1/2">
+    <section className="lg:max-w-7xl mx-auto   md:pb-20  space-y-12 lg:space-y-">
+      <h1 className="text-center text-3xl font-bold">About us</h1>
+
+      {/* Row 1 */}
+      <div className="flex flex-col md:flex-row items-center gap-12 md:px-4">
+        <div className="md:w-1/3 flex justify-center max-h-70 md:max-h-200">
           <img
-            src="chairs.jpg"
+            src="pic.jpg"
             alt="Events"
-            className="w-full h-full object-cover rounded-xl shadow-lg"
+            className=" w-full md:max-w-sm md:rounded-xl shadow-lg object-top md:object-contain object-cover  "
           />
         </div>
-        <div className="mt-8 md:mt-0 md:w-1/2">
+
+        <div className="md:w-2/3 px-4">
           <h2 className="text-3xl font-bold mb-4">Events & Celebrations</h2>
-          <p className="text-gray-700 text-lg leading-relaxed mt-8 md:mt-0">
-            We make every occasion special. From birthdays to funerals,
-            anniversaries, or family gatherings, we provide the perfect
-            ambiance, delicious food, and attentive service to ensure your event
-            is unforgettable.
-          </p>
+          <div className="text-gray-700 text-lg leading-relaxed space-y-4">
+            <p>
+              We make every occasion special. From birthdays to funerals,
+              anniversaries, or family gatherings, we provide the perfect
+              atmosphere for memorable experiences.
+            </p>
+
+            <p>
+              Our team handles decoration, menu planning, and on-site
+              coordination so you can focus on enjoying the moment. Whether
+              you're hosting an intimate event for close friends or a larger
+              celebration, we tailor every detail to fit your needs.
+            </p>
+
+            <p className="hidden lg:block">
+              Customers trust us because we combine great food, warm
+              hospitality, and a space that adapts to any style of celebration.
+              We also offer additional services, such as themed décor,
+              customized menus, and entertainment options to make your event
+              truly unforgettable.
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* Row 2: Owners */}
-      <div className="flex flex-col md:flex-row items-center gap-8 mt-8 md:mt-0">
-        <div className="md:w-1/2 md:order-2">
+      {/* Row 2 */}
+      <div className="flex flex-col md:flex-row items-center gap-12 ">
+        <div className="md:w-1/3 md:order-2 flex justify-center max-h-70 md:max-h-200 md:mr-4">
           <img
-            src="https://placehold.co/600x400"
-            alt="Owners"
-            className="w-full h-full object-cover rounded-xl shadow-lg mt-8 md:mt-0"
+            src="owners.jpg"
+            alt="Events"
+            className=" w-full md:max-w-sm md:rounded-xl shadow-lg object-top md:object-contain object-cover  "
           />
         </div>
-        <div className="md:w-1/2 md:order-1">
-          <h2 className="text-3xl font-bold mb-4 mt-8 md:mt-0">Our Owners</h2>
-          <p className="text-gray-700 text-lg leading-relaxed mt-8 md:mt-0">
-            For over 10 years, our owners have dedicated themselves to creating
-            a welcoming atmosphere and providing high-quality service. Their
-            passion for hospitality ensures every guest feels at home.
-          </p>
+
+        <div className="md:w-2/3 md:order-1 px-4">
+          <h2 className="text-3xl font-bold mb-4">Our Owners</h2>
+          <div className="text-gray-700 text-lg leading-relaxed space-y-4">
+            <p>
+              For over a decade, our owners have poured their energy into
+              creating a place that feels familiar the moment you walk in. Their
+              hands-on approach ensures that quality never slips—whether it's a
+              friendly greeting, a perfectly cooked dish, or the calming
+              atmosphere that defines our space.
+            </p>
+
+            <p>
+              Their philosophy is simple: treat every guest like a long-time
+              friend. This mindset is what keeps people returning year after
+              year.
+            </p>
+
+            <p className="hidden lg:block">
+              Beyond hospitality, they continuously look for ways to improve the
+              experience, from menu innovations to enhancing the ambiance. Their
+              dedication has earned them loyal customers and a reputation for
+              exceptional service.
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* Row 3: Kegelbahn */}
-      <div className="flex flex-col md:flex-row items-center gap-8 mt-8 md:mt-0">
-        <div className="md:w-1/2">
+      {/* Row 3 */}
+      <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="md:w-1/3 flex justify-center max-h-70 md:max-h-200 md:ml-4 lg:ml-0">
           <img
-            src="bowling.jpg"
-            alt="Kegelbahn"
-            className="w-full h-full object-cover rounded-xl shadow-lg mt-8 md:mt-0"
+            src="bowlin.jpg"
+            alt="Events"
+            className=" w-full md:max-w-sm md:rounded-xl shadow-lg transform -scale-x-100 object-center md:object-contain object-cover  "
           />
         </div>
-        <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold mb-4 mt-8 md:mt-0">Kegelbahn</h2>
-          <p className="text-gray-700 text-lg leading-relaxed mt-8 md:mt-0">
-            Enjoy our modern Kegelbahn for a fun night with friends and family.
-            Whether it’s a casual evening or a competitive game, our lanes are
-            perfect for entertainment while you savor our food and drinks.
-          </p>
+
+        <div className="md:w-2/3 px-4">
+          <h2 className="text-3xl font-bold mb-4">Kegelbahn</h2>
+          <div className="text-gray-700 text-lg leading-relaxed space-y-4 max-w-3xl">
+            <p>
+              Our Kegelbahn is one of the highlights of our establishment.
+              Modern lanes, professional lighting, and a cozy seating area make
+              it the perfect spot for fun nights, team-building events, or
+              friendly family competitions.
+            </p>
+
+            <p>
+              We maintain the lanes regularly to ensure smooth play, and our
+              staff is always available to help set up games or provide
+              equipment. Pair it with your favorite drinks or a full meal for
+              the ideal evening out.
+            </p>
+
+            <p className="hidden lg:block">
+              Whether you're hosting a birthday celebration, planning a casual
+              get-together, or just looking to try something new, our Kegelbahn
+              provides an experience that’s both entertaining and relaxing. Many
+              of our regular guests say it's their go-to activity whenever they
+              visit us.
+            </p>
+          </div>
         </div>
       </div>
     </section>
