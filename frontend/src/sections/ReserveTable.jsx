@@ -33,7 +33,7 @@ export function ReserveTable() {
         </p>
 
         <a
-          href="tel:+49+492264 6644"
+          href="tel:+49 2264 6644"
           className="inline-block bg-black text-white hover:text-(--brown-color) font-semibold px-8 py-4 rounded-xl text-lg hover:bg-(--beige-color) transition"
         >
           📞 Jetzt Anrufen: +49 2264 6644
