@@ -24,7 +24,7 @@ export function ScrollToHash() {
 function App() {
   return (
     <BrowserRouter>
-      <div className="pb-17">
+      <div className="pb-19">
         <Navbar />
       </div>
       <ScrollToHash />

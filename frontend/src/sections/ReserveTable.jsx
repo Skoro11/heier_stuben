@@ -17,25 +17,26 @@ export function ReserveTable() {
             }`}
           ></span>
           <p className="font-semibold text-lg m-0">
-            {isOpen ? "Open Now" : "Closed"}
+            {isOpen ? "Geöffnet" : "Geschlossen"}
           </p>
         </div>
 
-        <h2 className="text-3xl font-bold mb-6">Reserve a Table</h2>
-        <p className=" mb-6">
-          To reserve a table, please call us directly. Our team will be happy to
-          assist you.
+        <h2 className="text-3xl font-bold mb-6">Tisch Reservieren</h2>
+        <p className="mb-6">
+          Um einen Tisch zu reservieren, rufen Sie uns bitte direkt an. Unser
+          Team hilft Ihnen gerne weiter.
           <span className="block mt-2 text-gray-500">
-            *Please call us during the restaurant's working hours; otherwise, we
-            may not be able to take your call.
+            *Bitte kontaktieren Sie uns während der Öffnungszeiten des
+            Restaurants, da wir Ihren Anruf sonst möglicherweise nicht
+            entgegennehmen können.
           </span>
         </p>
 
         <a
-          href="tel:+491234567890"
+          href="tel:+49+492264 6644"
           className="inline-block bg-black text-white hover:text-(--brown-color) font-semibold px-8 py-4 rounded-xl text-lg hover:bg-(--beige-color) transition"
         >
-          📞 Call Now: +49 123 456 7890
+          📞 Jetzt Anrufen: +49 2264 6644
         </a>
       </div>
     </section>

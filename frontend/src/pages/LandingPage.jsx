@@ -15,24 +15,28 @@ export function LandingPage() {
         className="scroll-mt-20 max-w-7xl mx-auto px-4  pb-16 md:space-y-20 mt-0"
       >
         <div className="hidden md:block text-center text-3xl font-bold">
-          Where to find us
+          So finden Sie uns
         </div>
 
         <div className="flex flex-col md:flex-row items-center md:gap-8  md:mt-0">
           {/* Left side: text */}
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-4 mt-4 md:mt-0">
-              In the Heart of Marienheide
+              Im Herzen von Marienheide
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mt-8 md:mt-0">
-              Our restaurant is nestled in the heart of Marienheide, offering a
-              cozy atmosphere and exceptional cuisine. We’ve been welcoming
-              locals and visitors alike, providing memorable dining experiences
-              with a touch of tradition and warmth.
-            </p>
+              {" "}
+              Unser Restaurant liegt im Herzen von Marienheide und bietet eine
+              gemütliche Atmosphäre sowie hervorragende Küche. Wir heißen sowohl
+              Einheimische als auch Besucher herzlich willkommen und sorgen für
+              unvergessliche kulinarische Erlebnisse mit einem Hauch von
+              Tradition und Herzlichkeit.{" "}
+            </p>{" "}
             <p className="text-gray-700 text-lg leading-relaxed mt-4">
-              Come by to enjoy great food, friendly service, and a charming
-              setting that makes every meal special.
+              {" "}
+              Besuchen Sie uns, um exzellentes Essen, freundlichen Service und
+              ein charmantes Ambiente zu genießen, das jedes Mahl zu etwas
+              Besonderem macht.{" "}
             </p>
           </div>
 

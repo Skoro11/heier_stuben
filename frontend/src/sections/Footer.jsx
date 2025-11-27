@@ -1,19 +1,10 @@
 import { Link } from "react-router-dom";
-
-const hours = {
-  Monday: ["17:00", "23:00"],
-  Tuesday: ["17:00", "23:00"],
-  Wednesday: null,
-  Thursday: ["17:00", "23:00"],
-  Friday: ["17:00", "23:00"],
-  Saturday: ["17:00", "23:00"],
-  Sunday: ["11:00", "22:00"],
-};
+import { hours } from "../utils/openHours";
 
 export function Footer() {
   return (
     <footer className="bg-black text-white py-10" id="footer">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Opening hours */}
         <div>
           <h3 className="text-lg font-semibold mb-2">Öffnungszeiten</h3>
@@ -25,6 +16,14 @@ export function Footer() {
               </li>
             ))}
           </ul>
+
+          <div className="md:hidden mt-2 text-white text-sm space-y-1">
+            <p>
+              *Die Küche ist sonntags und an Feiertagen bis 20:00 Uhr geöffnet,
+              sonst bis 21:00 Uhr.
+            </p>
+            <p>*Das Restaurant öffnet an Feiertagen bereits um 11:30 Uhr.</p>
+          </div>
         </div>
 
         {/* Rechtliches */}
@@ -35,7 +34,7 @@ export function Footer() {
               <Link
                 to="/legal"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="hover:underline"
+                className="hover:text-gray-600 transition"
               >
                 Datenschutzerklärung
               </Link>
@@ -44,7 +43,7 @@ export function Footer() {
               <Link
                 to="/legal"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="hover:underline"
+                className="hover:text-gray-600 transition"
               >
                 Impressum
               </Link>
@@ -56,8 +55,23 @@ export function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Kontakt</h3>
           <ul className="flex flex-col gap-1 text-gray-300">
-            <li>0123 456789</li>
-            <li>Marienheide 51709, Leppestrasse 7</li>
+            <a
+              href="tel:+492264 6644"
+              className="hover:text-gray-600 transition"
+            >
+              +49 2264 6644
+            </a>
+            <li>Etilena Tolo</li>
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Restaurant+Heier+Stuben+Marienheide+Leppestrasse+7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-600 transition"
+              >
+                Marienheide 51709, Leppestraße 7
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -33,7 +33,7 @@ export default function Navbar() {
               }}
               className="hover:text-gray-600 transition"
             >
-              Home
+              Startseite
             </Link>
           </li>
           <li>
@@ -47,7 +47,7 @@ export default function Navbar() {
                 setIsOpen(false); // if mobile
               }}
             >
-              Menu
+              Speisekarte
             </Link>
           </li>
           <li>
@@ -61,7 +61,7 @@ export default function Navbar() {
                 setIsOpen(false); // if mobile
               }}
             >
-              Location
+              Standort
             </Link>
           </li>
           <li>
@@ -87,7 +87,7 @@ export default function Navbar() {
   focus:ring-[var(--brown-color)]
   inline-block"
             >
-              Reserve a Table
+              Tisch reservieren
             </Link>
           </li>
         </ul>
@@ -114,13 +114,13 @@ export default function Navbar() {
             <li>
               <Link
                 to="/"
-                className="hover:text-gray-600 transition w-full block "
+                className="hover:text-gray-600 w-full block "
                 onClick={() => {
                   setIsOpen(false);
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                Home
+                Startseite
               </Link>
             </li>
             <li>
@@ -134,7 +134,7 @@ export default function Navbar() {
                   setIsOpen(false); // if mobile
                 }}
               >
-                Menu
+                Speisekarte
               </Link>
             </li>
             <Link
@@ -147,7 +147,7 @@ export default function Navbar() {
                 setIsOpen(false); // if mobile
               }}
             >
-              Location
+              Standort
             </Link>
             <Link
               to="/#footer"
@@ -159,7 +159,7 @@ export default function Navbar() {
                 setIsOpen(false); // if mobile
               }}
             >
-              Working Hours
+              Öffnungszeiten
             </Link>
             <li>
               <Link
@@ -170,7 +170,7 @@ export default function Navbar() {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                Reserve a Table
+                Tisch reservieren
               </Link>
             </li>
           </ul>

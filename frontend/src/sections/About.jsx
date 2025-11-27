@@ -1,40 +1,43 @@
 export function About() {
   return (
     <section className="lg:max-w-7xl mx-auto   md:pb-20  space-y-12 lg:space-y-">
-      <h1 className="text-center text-3xl font-bold">About us</h1>
+      <h1 className="text-center text-3xl font-bold">Über uns</h1>
 
       {/* Row 1 */}
       <div className="flex flex-col md:flex-row items-center gap-12 md:px-4">
         <div className="md:w-1/3 flex justify-center max-h-70 md:max-h-200">
           <img
-            src="pic.jpg"
+            src="pic.webp"
             alt="Events"
             className=" w-full md:max-w-sm md:rounded-xl shadow-lg object-top md:object-contain object-cover  "
           />
         </div>
 
         <div className="md:w-2/3 px-4">
-          <h2 className="text-3xl font-bold mb-4">Events & Celebrations</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Veranstaltungen und Feiern
+          </h2>
           <div className="text-gray-700 text-lg leading-relaxed space-y-4">
             <p>
-              We make every occasion special. From birthdays to funerals,
-              anniversaries, or family gatherings, we provide the perfect
-              atmosphere for memorable experiences.
+              Wir machen jeden Anlass zu etwas Besonderem. Von Geburtstagen über
+              Beerdigungen, Jubiläen bis hin zu Familientreffen schaffen wir die
+              perfekte Atmosphäre für unvergessliche Momente.
             </p>
 
             <p>
-              Our team handles decoration, menu planning, and on-site
-              coordination so you can focus on enjoying the moment. Whether
-              you're hosting an intimate event for close friends or a larger
-              celebration, we tailor every detail to fit your needs.
+              Unser Team übernimmt die Menüplanung und die Abläufe vor Ort,
+              damit Sie sich ganz auf den Moment konzentrieren können. Ob Sie
+              eine kleine Feier im engen Kreis oder ein größeres Event
+              ausrichten – wir passen jedes Detail Ihren Wünschen an.
             </p>
 
             <p className="hidden lg:block">
-              Customers trust us because we combine great food, warm
-              hospitality, and a space that adapts to any style of celebration.
-              We also offer additional services, such as themed décor,
-              customized menus, and entertainment options to make your event
-              truly unforgettable.
+              Unsere Gäste vertrauen uns, weil wir hervorragendes Essen,
+              herzliche Gastfreundschaft und einen Raum bieten, der sich jeder
+              Art von Feier anpasst. Wir bieten keine Dekorationen oder
+              Unterhaltungsprogramme an, aber unser flexibler Veranstaltungsraum
+              und unser persönlicher Service sorgen dennoch für ein angenehmes
+              und unvergessliches Erlebnis.
             </p>
           </div>
         </div>
@@ -51,27 +54,29 @@ export function About() {
         </div>
 
         <div className="md:w-2/3 md:order-1 px-4">
-          <h2 className="text-3xl font-bold mb-4">Our Owners</h2>
+          <h2 className="text-3xl font-bold mb-4">Unsere Inhaber</h2>
           <div className="text-gray-700 text-lg leading-relaxed space-y-4">
             <p>
-              For over a decade, our owners have poured their energy into
-              creating a place that feels familiar the moment you walk in. Their
-              hands-on approach ensures that quality never slips—whether it's a
-              friendly greeting, a perfectly cooked dish, or the calming
-              atmosphere that defines our space.
-            </p>
-
+              {" "}
+              Seit über einem Jahrzehnt investieren unsere Inhaber ihre Energie
+              darin, einen Ort zu schaffen, der sich vom ersten Moment an
+              vertraut anfühlt. Ihr praktischer Ansatz sorgt dafür, dass die
+              Qualität niemals nachlässt – sei es durch eine freundliche
+              Begrüßung, ein perfekt zubereitetes Gericht oder die beruhigende
+              Atmosphäre, die unseren Raum ausmacht.{" "}
+            </p>{" "}
             <p>
-              Their philosophy is simple: treat every guest like a long-time
-              friend. This mindset is what keeps people returning year after
-              year.
-            </p>
-
+              {" "}
+              Ihre Philosophie ist einfach: Behandle jeden Gast wie einen
+              langjährigen Freund. Diese Einstellung sorgt dafür, dass Gäste
+              Jahr für Jahr gerne zurückkehren.{" "}
+            </p>{" "}
             <p className="hidden lg:block">
-              Beyond hospitality, they continuously look for ways to improve the
-              experience, from menu innovations to enhancing the ambiance. Their
-              dedication has earned them loyal customers and a reputation for
-              exceptional service.
+              {" "}
+              Über die Gastfreundschaft hinaus suchen sie kontinuierlich nach
+              Möglichkeiten, das Erlebnis zu verbessern, von Menü-Innovationen
+              bis zur Optimierung der Atmosphäre. Ihr Engagement hat ihnen treue
+              Kunden und einen Ruf für außergewöhnlichen Service eingebracht.{" "}
             </p>
           </div>
         </div>
@@ -91,25 +96,27 @@ export function About() {
           <h2 className="text-3xl font-bold mb-4">Kegelbahn</h2>
           <div className="text-gray-700 text-lg leading-relaxed space-y-4 max-w-3xl">
             <p>
-              Our Kegelbahn is one of the highlights of our establishment.
-              Modern lanes, professional lighting, and a cozy seating area make
-              it the perfect spot for fun nights, team-building events, or
-              friendly family competitions.
-            </p>
-
+              {" "}
+              Unsere Kegelbahn ist eines der Highlights unseres Hauses. Mit rund
+              30 Kegelvereinen in der Umgebung möchten wir die Tradition
+              bewahren. Die Bahnen, das gemütliche Licht und die komfortablen
+              Sitzgelegenheiten machen sie zum perfekten Ort für gesellige
+              Abende, Vereinsrunden oder freundschaftliche Familienwettkämpfe.{" "}
+            </p>{" "}
             <p>
-              We maintain the lanes regularly to ensure smooth play, and our
-              staff is always available to help set up games or provide
-              equipment. Pair it with your favorite drinks or a full meal for
-              the ideal evening out.
-            </p>
-
+              {" "}
+              Wir pflegen die Bahnen regelmäßig, um einen reibungslosen
+              Spielverlauf zu gewährleisten. Kombiniert mit Ihren
+              Lieblingsgetränken oder einem kompletten Menü wird der Abend zu
+              einem rundum gelungenen Erlebnis.{" "}
+            </p>{" "}
             <p className="hidden lg:block">
-              Whether you're hosting a birthday celebration, planning a casual
-              get-together, or just looking to try something new, our Kegelbahn
-              provides an experience that’s both entertaining and relaxing. Many
-              of our regular guests say it's their go-to activity whenever they
-              visit us.
+              {" "}
+              Ob Sie einen Geburtstag feiern, ein zwangloses Beisammensein
+              planen oder einfach etwas Neues ausprobieren möchten – unsere
+              Kegelbahn bietet ein Erlebnis, das sowohl unterhaltsam als auch
+              entspannend ist. Viele unserer Stammgäste sagen, dass sie bei
+              jedem Besuch ihre erste Wahl ist.{" "}
             </p>
           </div>
         </div>

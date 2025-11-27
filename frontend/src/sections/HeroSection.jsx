@@ -21,7 +21,7 @@ export function HeroSection() {
           {/* Working Hours Card */}
           <div className="bg-black/95 md:bg-black/50 rounded-lg shadow-md p-4 w-full">
             <p className="font-bold text-xl mb-4 flex justify-between">
-              Working Hours{" "}
+              Öffnungszeiten{" "}
               <div className="flex items-center space-x-2">
                 <span
                   className={`w-3 h-3 rounded-full ${
@@ -29,7 +29,7 @@ export function HeroSection() {
                   }`}
                 ></span>
                 <p className="font-semibold text-lg">
-                  {isOpen ? "Open Now" : "Closed"}
+                  {isOpen ? "Geöffnet" : "Geschlossen"}
                 </p>
               </div>
             </p>
@@ -42,7 +42,7 @@ export function HeroSection() {
                 >
                   <span className="font-medium">{day}</span>
                   <span className="text-gray-200">
-                    {time ? `${time[0]} - ${time[1]}` : "Closed"}
+                    {time ? `${time[0]} - ${time[1]}` : "Geschlossen"}
                   </span>
                 </div>
               ))}
@@ -51,10 +51,10 @@ export function HeroSection() {
             {/* Extra Info */}
             <div className="mt-4 text-gray-300 text-sm space-y-1">
               <p>
-                Kitchen is open on Sundays and holidays until 20:00. Otherwise
-                until 21:00
+                Die Küche ist sonntags und an Feiertagen bis 20:00 Uhr geöffnet,
+                sonst bis 21:00 Uhr.
               </p>
-              <p>Restaurant opens on holidays from 11:30.</p>
+              <p>Das Restaurant öffnet an Feiertagen bereits um 11:30 Uhr.</p>
             </div>
           </div>
         </div>

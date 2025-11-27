@@ -24,7 +24,7 @@ export function MenuSwiper() {
     <main className="mb-8 mt-8 scroll-mt-24" id="menu">
       {/* Thumbnail */}
       <h2 className=" text-center  text-3xl font-bold md:mb-8 my-8 md:mt-0 md:text-center">
-        Menu
+        Speisekarte
       </h2>
       <div className="flex justify-center gap-4 mx-auto w-full lg:w-1/2  p-4">
         <img
@@ -90,7 +90,7 @@ export function MenuSwiper() {
         </>
       )}
       <div className=" px-4 text-gray-400 flex md:justify-center ">
-        * Click image to open
+        * Bild anklicken, um zu öffnen
       </div>
     </main>
   );

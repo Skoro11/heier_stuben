@@ -1,13 +1,13 @@
 // src/utils/openHours.js
 
 export const hours = {
-  Monday: ["17:00", "23:00"],
-  Tuesday: ["17:00", "23:00"],
-  Wednesday: null,
-  Thursday: ["17:00", "23:00"],
-  Friday: ["17:00", "23:00"],
-  Saturday: ["17:00", "23:00"],
-  Sunday: ["11:00", "22:00"],
+  Montag: ["17:00", "23:00"],
+  Dienstag: ["17:00", "23:00"],
+  Mittwoch: null,
+  Donnerstag: ["17:00", "23:00"],
+  Freitag: ["17:00", "23:00"],
+  Samstag: ["17:00", "23:00"],
+  Sonntag: ["11:00", "22:00"],
 };
 
 // Returns true if the restaurant is open now
