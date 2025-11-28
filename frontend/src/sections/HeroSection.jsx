@@ -5,7 +5,7 @@ export function HeroSection() {
     <section className="relative w-full max-w-7xl mx-auto">
       <img
         src="new.jpg"
-        alt="Restaurant"
+        alt="Restaurant main hero image"
         className="w-full md:h-auto hidden md:block md:object-cover lg:max-h-5rem md:max-h-[30rem]"
       />
 

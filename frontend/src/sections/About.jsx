@@ -8,7 +8,7 @@ export function About() {
         <div className="md:w-1/3 flex justify-center max-h-70 md:max-h-200">
           <img
             src="pic.webp"
-            alt="Events"
+            alt="Decorated table picture"
             className=" w-full md:max-w-sm md:rounded-xl shadow-lg object-top md:object-contain object-cover  "
           />
         </div>
@@ -48,7 +48,7 @@ export function About() {
         <div className="md:w-1/3 md:order-2 flex justify-center max-h-70 md:max-h-200 md:mr-4">
           <img
             src="owners.jpg"
-            alt="Events"
+            alt="Owners picture"
             className=" w-full md:max-w-sm md:rounded-xl shadow-lg object-top md:object-contain object-cover  "
           />
         </div>
@@ -87,7 +87,7 @@ export function About() {
         <div className="md:w-1/3 flex justify-center max-h-70 md:max-h-200 md:ml-4 lg:ml-0">
           <img
             src="bowlin.jpg"
-            alt="Events"
+            alt="Bowling ball with pins picture"
             className=" w-full md:max-w-sm md:rounded-xl shadow-lg transform -scale-x-100 object-center md:object-contain object-cover  "
           />
         </div>
