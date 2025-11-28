@@ -28,18 +28,21 @@ export function MenuSwiper() {
       </h2>
       <div className="flex justify-center gap-4 mx-auto w-full lg:w-1/2  p-4">
         <img
+          loading="lazy"
           src="./first_page.webp"
           alt="Menu Preview"
           className="w-auto rounded-xl md:max-h-70 shadow cursor-pointer hover:opacity-80 transition"
           onClick={() => setOpen(true)}
         />
         <img
+          loading="lazy"
           src="./alkoholfreiweb.webp"
           alt="Menu Preview"
           className="hidden md:block w-auto rounded-xl md:max-h-70 rounded-xl shadow cursor-pointer hover:opacity-80 transition"
           onClick={() => setOpen(true)}
         />
         <img
+          loading="lazy"
           src="./spirituosenweb.webp"
           alt="Menu Preview"
           className="w-auto hidden md:block rounded-xl md:max-h-70 rounded-xl shadow cursor-pointer hover:opacity-80 transition"
@@ -77,6 +80,7 @@ export function MenuSwiper() {
                   <SwiperSlide key={index}>
                     <div className="flex justify-center items-center my-10 h-[calc(100vh-80px)]">
                       <img
+                        loading="lazy"
                         src={item}
                         alt={item}
                         className="h-full object-contain rounded-lg"

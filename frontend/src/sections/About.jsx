@@ -7,6 +7,7 @@ export function About() {
       <div className="flex flex-col md:flex-row items-center gap-12 md:px-4">
         <div className="md:w-1/3 flex justify-center max-h-70 md:max-h-200">
           <img
+            loading="lazy"
             src="pic.webp"
             alt="Decorated table picture"
             className=" w-full md:max-w-sm md:rounded-xl shadow-lg object-top md:object-contain object-cover  "
@@ -47,6 +48,7 @@ export function About() {
       <div className="flex flex-col md:flex-row items-center gap-12 ">
         <div className="md:w-1/3 md:order-2 flex justify-center max-h-70 md:max-h-200 md:mr-4">
           <img
+            loading="lazy"
             src="owners.jpg"
             alt="Owners picture"
             className=" w-full md:max-w-sm md:rounded-xl shadow-lg object-top md:object-contain object-cover  "
@@ -88,6 +90,7 @@ export function About() {
           <img
             src="bowlin.jpg"
             alt="Bowling ball with pins picture"
+            loading="lazy"
             className=" w-full md:max-w-sm md:rounded-xl shadow-lg transform -scale-x-100 object-center md:object-contain object-cover  "
           />
         </div>

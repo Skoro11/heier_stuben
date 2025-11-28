@@ -16,6 +16,7 @@ export default function Navbar() {
             }}
           >
             <img
+              loading="lazy"
               src="/modern.jpg"
               alt="Heier Stuben Logo"
               className="h-10 w-auto"
