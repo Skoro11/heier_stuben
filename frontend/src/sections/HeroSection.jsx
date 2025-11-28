@@ -1,13 +1,6 @@
-import { useState, useEffect } from "react";
-import { hours, isOpenNow } from "../utils/openHours";
-
+import { OpenStatus } from "../components/OpenStatus";
+import { hoursGr } from "../utils/openHours";
 export function HeroSection() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    setIsOpen(isOpenNow(hours));
-  }, []);
-
   return (
     <section className="relative w-full max-w-7xl mx-auto">
       <img
@@ -23,19 +16,12 @@ export function HeroSection() {
             <p className="font-bold text-xl mb-4 flex justify-between">
               Öffnungszeiten{" "}
               <div className="flex items-center space-x-2">
-                <span
-                  className={`w-3 h-3 rounded-full ${
-                    isOpen ? "bg-green-500" : "bg-red-500"
-                  }`}
-                ></span>
-                <p className="font-semibold text-lg">
-                  {isOpen ? "Geöffnet" : "Geschlossen"}
-                </p>
+                <OpenStatus />
               </div>
             </p>
 
             <div className="flex flex-col gap-2">
-              {Object.entries(hours).map(([day, time]) => (
+              {Object.entries(hoursGr).map(([day, time]) => (
                 <div
                   key={day}
                   className="flex justify-between w-full px-2 py-1 border-b border-gray-600 last:border-b-0"

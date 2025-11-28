@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { hours } from "../utils/openHours";
+import { hoursGr } from "../utils/openHours";
 
 export function Footer() {
   return (
@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Öffnungszeiten</h3>
           <ul>
-            {Object.entries(hours).map(([day, time]) => (
+            {Object.entries(hoursGr).map(([day, time]) => (
               <li key={day} className="flex justify-between">
                 <span>{day}</span>
                 <span>{time ? `${time[0]} - ${time[1]}` : "Geschlossen"}</span>
