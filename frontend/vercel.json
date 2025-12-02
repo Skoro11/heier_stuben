@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.heierstuben.de/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/:path*",
