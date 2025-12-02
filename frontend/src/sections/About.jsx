@@ -1,16 +1,26 @@
+import { useState } from "react";
 export function About() {
+  const [loaded, setLoaded] = useState(false);
+  const [loadedSecond, setLoadedSecond] = useState(false);
+  const [loadedThird, setLoadedThird] = useState(false);
   return (
     <section className="lg:max-w-7xl mx-auto   md:pb-20  space-y-12 lg:space-y-">
       <h1 className="text-center text-3xl font-bold">Über uns</h1>
 
       {/* Row 1 */}
       <div className="flex flex-col md:flex-row items-center gap-12 md:px-4">
-        <div className="md:w-1/3 flex justify-center max-h-70 md:max-h-200">
+        <div
+          className="md:w-1/3 flex justify-center max-h-70 md:max-h-200 bg-red-500 md:rounded-xl bg-cover"
+          style={{ backgroundImage: "url('picPlaceholder.webp')" }}
+        >
           <img
             loading="lazy"
             src="pic.webp"
             alt="Decorated table picture"
-            className=" w-full md:max-w-sm md:rounded-xl shadow-lg object-top md:object-contain object-cover  "
+            className={` object-cover md:rounded-xl transition-opacity duration-700 ${
+              loaded ? "opacity-100" : "opacity-0"
+            }`}
+            onLoad={() => setLoaded(true)}
           />
         </div>
 
@@ -46,12 +56,18 @@ export function About() {
 
       {/* Row 2 */}
       <div className="flex flex-col md:flex-row items-center gap-12 ">
-        <div className="md:w-1/3 md:order-2 flex justify-center max-h-70 md:max-h-200 md:mr-4">
+        <div
+          className="md:w-1/3 md:order-2 flex justify-center max-h-70 md:max-h-200 md:mr-4 md:rounded-xl bg-cover"
+          style={{ backgroundImage: "url('ownersPlaceholder.webp')" }}
+        >
           <img
             loading="lazy"
             src="owners.jpg"
             alt="Owners picture"
-            className=" w-full md:max-w-sm md:rounded-xl shadow-lg object-top md:object-contain object-cover  "
+            className={`object-top object-cover md:rounded-xl transition-opacity duration-700 ${
+              loadedSecond ? "opacity-100" : "opacity-0"
+            }`}
+            onLoad={() => setLoadedSecond(true)}
           />
         </div>
 
@@ -86,12 +102,18 @@ export function About() {
 
       {/* Row 3 */}
       <div className="flex flex-col md:flex-row items-center gap-12">
-        <div className="md:w-1/3 flex justify-center max-h-70 md:max-h-200 md:ml-4 lg:ml-0">
+        <div
+          className="md:w-1/3 flex justify-center max-h-70 md:max-h-200 md:ml-4 lg:ml-0 md:rounded-xl bg-cover"
+          style={{ backgroundImage: "url('bowlinPlaceholder.webp')" }}
+        >
           <img
             src="bowlin.jpg"
             alt="Bowling ball with pins picture"
             loading="lazy"
-            className=" w-full md:max-w-sm md:rounded-xl shadow-lg transform -scale-x-100 object-center md:object-contain object-cover  "
+            className={` transform -scale-x-100 object-center md:object-contain object-cover md:rounded-xl  transition-opacity duration-700 ${
+              loadedThird ? "opacity-100" : "opacity-0"
+            }`}
+            onLoad={() => setLoadedThird(true)}
           />
         </div>
 
