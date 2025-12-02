@@ -56,7 +56,7 @@ export function Footer() {
           <h3 className="text-lg font-semibold mb-2">Kontakt</h3>
           <ul className="flex flex-col gap-1 text-gray-300">
             <a
-              href="tel:+492264 6644"
+              href="tel:+4922646644"
               className="hover:text-gray-600 transition"
             >
               +49 2264 6644
