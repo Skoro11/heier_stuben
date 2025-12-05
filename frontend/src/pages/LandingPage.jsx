@@ -2,7 +2,10 @@ import { HeroSection } from "../sections/HeroSection";
 import { ReserveTable } from "../sections/ReserveTable";
 import { About } from "../sections/About";
 import { MenuSwiper } from "../sections/MenuSwiper";
+import { useState } from "react";
 export function LandingPage() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <>
       <HeroSection />
@@ -41,12 +44,15 @@ export function LandingPage() {
           </div>
 
           {/* Right side: map */}
-          <div className="md:w-1/2 h-96 w-full rounded-xl overflow-hidden shadow-lg mt-8 md:mt-0">
+          <div className="md:w-1/2 h-96 w-full rounded-xl overflow-hidden shadow-lg mt-8 md:mt-0 bg-gray-400 bg-cover">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.3917285207176!2d7.527141912854569!3d51.0827777716019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47becae9c621084b%3A0xbe8d1206e69e84f!2sRestaurant%20Heier%20Stuben%20Inh.%20Etilena%20Tolo!5e0!3m2!1sen!2sde!4v1763997101319!5m2!1sen!2sde"
-              className="w-full h-full border-0"
+              className={`w-full h-full border-0 transition-opacity duration-700 ${
+                loaded ? "opacity-100" : "opacity-0"
+              }`}
               allowFullScreen
               loading="lazy"
+              onLoad={() => setLoaded(true)}
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
