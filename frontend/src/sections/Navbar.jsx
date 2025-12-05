@@ -17,7 +17,7 @@ export default function Navbar() {
           >
             <img
               loading="lazy"
-              src="/modern.jpg"
+              src="./navbar/modern.webp"
               alt="Heier Stuben Logo"
               className="h-10 w-auto"
             />
@@ -74,8 +74,8 @@ export default function Navbar() {
                 if (el) el.scrollIntoView({ behavior: "smooth" });
                 setIsOpen(false); // if mobile
               }}
-              className="bg-[var(--beige-color)] 
-              text-[var(--brown-color)] 
+              className="bg-(--beige-color) 
+              text-(--brown-color) 
               font-semibold 
               py-3 px-6 
   rounded-full 
@@ -85,7 +85,7 @@ export default function Navbar() {
   duration-300 
   focus:outline-none 
   focus:ring-2 
-  focus:ring-[var(--brown-color)]
+  focus:ring-(--brown-color)
   inline-block"
             >
               Tisch reservieren

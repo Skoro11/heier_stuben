@@ -6,13 +6,11 @@ export function HeroSection() {
   return (
     <section className="relative w-full max-w-7xl mx-auto">
       <div
-        className="hidden md:block w-full h-64 md:h-[30rem] lg:max-h-5rem bg-cover bg-center bg-gray-200"
-        style={{ backgroundImage: "url('newPlaceholder.webp')" }}
-        role="img"
-        aria-label="Restaurant main hero image"
+        className="hidden md:block w-full h-64 md:h-[30rem] lg:max-h-5rem bg-cover bg-center "
+        style={{ backgroundImage: "url('bannerPlh.webp')" }}
       >
         <img
-          src="new.webp"
+          src="banner.webp"
           alt="Restaurant building outside view"
           onLoad={() => setLoaded(true)}
           className={`object-cover w-full max-h-[30rem] transition-opacity duration-700 ${
